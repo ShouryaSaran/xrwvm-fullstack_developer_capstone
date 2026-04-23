@@ -1,0 +1,118 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    .contact-shell {
+      width: 80%;
+      margin: 5% auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .contact-hero {
+      min-height: 280px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(0, 191, 191, 0.08), rgba(0, 84, 84, 0.08));
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-card {
+      border-left: 4px solid darkturquoise;
+      padding-left: 1.5rem;
+      color: #1f2937;
+      line-height: 1.8;
+    }
+
+    .contact-card h2 {
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .contact-chip {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      margin: 0.25rem 0.35rem 0.25rem 0;
+      border-radius: 999px;
+      background: #e6fffb;
+      color: #0f766e;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .contact-note {
+      margin-top: 1.25rem;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+      <div class="container-fluid">
+        <h2 style="padding-right: 5%;">Dealerships</h2>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="contact-shell">
+      <div class="banner" name="contact-header">
+        <h1>Contact Us</h1>
+        <p>We’re available seven days a week to help with dealership questions, vehicle listings, and customer support.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-hero">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Customer support team" style="width:100%; max-width: 430px; border-radius: 18px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);">
+        </div>
+
+        <div class="contact-card">
+          <h2>Best Cars Dealership Support</h2>
+          <p><strong>Email:</strong> support@bestcars.com</p>
+          <p><strong>Phone:</strong> (312) 555-0188</p>
+          <p><strong>Sales Desk:</strong> sales@bestcars.com</p>
+          <p><strong>Customer Care:</strong> care@bestcars.com</p>
+          <p><strong>Head Office:</strong> 742 Market Street, Chicago, IL 60601</p>
+
+          <div>
+            <span class="contact-chip">Roadside Assistance</span>
+            <span class="contact-chip">Trade-in Questions</span>
+            <span class="contact-chip">Service Appointments</span>
+            <span class="contact-chip">Financing Support</span>
+          </div>
+
+          <p class="contact-note">If you need urgent help after hours, send us an email and our support team will respond on the next business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
