@@ -49,7 +49,13 @@ app.get('/fetchReviews', async (req, res) => {
 // Express route to fetch reviews by a particular dealer
 app.get('/fetchReviews/dealer/:id', async (req, res) => {
   try {
-    const documents = await Reviews.find({dealership: req.params.id});
+    const dealerId = Number(req.params.id);
+
+    if (Number.isNaN(dealerId)) {
+      return res.status(400).json({ error: 'Dealer id must be a number' });
+    }
+
+    const documents = await Reviews.find({ dealership: dealerId });
     res.json(documents);
   } catch (error) {
     res.status(500).json({ error: 'Error fetching documents' });
@@ -80,8 +86,14 @@ app.get('/fetchDealers/:state', async (req, res) => {
 // Express route to fetch dealer by a particular id
 app.get('/fetchDealer/:id', async (req, res) => {
   try {
-    const documents = await Dealerships.find({ id: req.params.id });
-    res.json(documents);
+    const dealerId = Number(req.params.id);
+
+    if (Number.isNaN(dealerId)) {
+      return res.status(400).json({ error: 'Dealer id must be a number' });
+    }
+
+    const document = await Dealerships.findOne({ id: dealerId });
+    res.json(document);
   } catch (error) {
     res.status(500).json({ error: 'Error fetching documents' });
   }
