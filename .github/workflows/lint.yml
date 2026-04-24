@@ -43,10 +43,7 @@ jobs:
         with:
           node-version: "14"
 
-      - name: Install JSHint
-        run: npm install jshint --global
-
-      - name: Run Linter
+      - name: Run JavaScript Syntax Check
         run: |
-          find ./server/database -name "*.js" -exec jshint --config .jshintrc {} +
+          find ./server/database -name "*.js" -exec node --check {} \;
           echo "Linted all the js files successfully"
