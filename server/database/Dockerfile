@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye
+ARG BASE_IMAGE=node:18
+FROM ${BASE_IMAGE}
 
 WORKDIR /app
 

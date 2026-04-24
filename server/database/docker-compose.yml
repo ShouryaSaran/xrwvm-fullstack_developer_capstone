@@ -2,7 +2,8 @@ services:
   # Mongodb service
   mongo_db:
     container_name: db_container
-    image: public.ecr.aws/docker/library/mongo:latest
+    image: ${LOCAL_MONGO_IMAGE:-mongo:latest}
+    pull_policy: never
     ports:
       - 27017:27017
     restart: always
@@ -11,7 +12,8 @@ services:
 
   # Node api service
   api:
-    image: nodeapp
+    image: ${LOCAL_API_IMAGE:-nodeapp}
+    pull_policy: never
     ports:
       - 3030:3030
     depends_on: 
