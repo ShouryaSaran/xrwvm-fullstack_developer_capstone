@@ -1,14 +1,13 @@
-FROM public.ecr.aws/docker/library/node:18.12.1-bullseye-slim
+FROM mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye
 
-RUN npm install -g npm@9.1.3
+WORKDIR /app
 
-ADD package.json .
-ADD app.js .
-ADD review.js .
-ADD dealership.js .
-ADD data/dealerships.json .
-ADD data/reviews.json .
-COPY . .
+COPY package.json ./
+COPY app.js ./
+COPY review.js ./
+COPY dealership.js ./
+COPY data/dealerships.json ./
+COPY data/reviews.json ./
 RUN npm install
 
 EXPOSE 3030
