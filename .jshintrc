@@ -2,5 +2,8 @@
   "asi": true,
   "browser": true,
   "esversion": 11,
-  "node": true
+  "node": true,
+  "undef": false,
+  "unused": false,
+  "latedef": false
 }
