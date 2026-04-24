@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start:local": "node app.local.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
